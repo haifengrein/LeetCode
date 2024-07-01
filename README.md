@@ -25,5 +25,3 @@ This repository tracks my LeetCode problem-solving progress, primarily using Pyt
 | 594 | [Longest Harmonious Subsequence](./Python/594.%20Longest%20Harmonious%20Subsequence.py) | Easy | Array, Hash Table, Sliding Window |
 | 643 | [Maximum Average Subarray I](./Python/643.%20Maximum%20Average%20Subarray%20I.py) | Easy | Array, Sliding Window |
 | 1176 | [Diet Plan Performance](./Python/1176.%20Diet%20Plan%20Performance.py) | Easy | Array, Sliding Window |
-
-Last Updated: [Current Date]

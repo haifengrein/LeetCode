@@ -27,4 +27,3 @@
 | 643 | [子数组最大平均数 I](./Python/643.%20Maximum%20Average%20Subarray%20I.py) | 简单 | 数组, 滑动窗口 |
 | 1176 | [健身计划评估](./Python/1176.%20Diet%20Plan%20Performance.py) | 简单 | 数组, 滑动窗口 |
 
-最后更新：[当前日期]
