@@ -14,7 +14,6 @@ class Solution:
                 return 1
             return 0
         
-        
         n = len(calories)
         if n < k:
             return 0
@@ -29,7 +28,25 @@ class Solution:
         
         return points
         
-        
+class Solution:
+    def dietPlanPerformance(self, calories: List[int], k: int, lower: int, upper: int) -> int:
+        T_sum = points = 0
+        left = 0
+        n = len(calories)
+        if n < k:
+            return 0
+        for right in range(n):
+            T_sum += calories[right]
+
+            if right - left + 1 == k:
+                if T_sum > upper:
+                    points += 1
+                elif T_sum < lower:
+                    points -= 1
+                T_sum -= calories[left]
+                left += 1
+        return points
+
             
 # @lc code=end
 

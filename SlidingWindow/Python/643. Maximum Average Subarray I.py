@@ -15,5 +15,22 @@ class Solution:
             if curr_sum > max_sum:
                 max_sum = curr_sum
         return max_sum / k
+    
+class Solution:
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
+        if len(nums) == k:
+            return sum(nums) /k
+    
+        curr_sum, max_sum, left = 0,float("-inf"),0
+        for right in range(len(nums)):
+            curr_sum += nums[right]
+            if right - left + 1 == k:
+                if curr_sum > max_sum:
+                    max_sum = curr_sum
+                curr_sum -= nums[left]
+                left +=1
+        return max_sum /k
+
+
 # @lc code=end
 

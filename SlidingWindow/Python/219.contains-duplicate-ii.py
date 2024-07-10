@@ -12,6 +12,8 @@
 # @lc code=start
 class Solution:
     def containsNearbyDuplicate(self, nums, k: int) -> bool:
+        if len(nums) ==len(set(nums)):
+            return False
         window = set()
         left = 0
         for right in range(len(nums)):
@@ -26,14 +28,14 @@ class Solution:
     
 class Solution:
     def containsNearbyDuplicate(self, nums, k: int) -> bool:
+        if len(nums) ==len(set(nums)):
+            return False
         dict = {}
         for index, num in enumerate(nums):
             if num in dict and index - dict[num] <=k :
                 return True
             dict[num] = index
         return False
-        
-        
 # @lc code=end
 
 
