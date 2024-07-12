@@ -2,15 +2,15 @@
 [English](README.md) | [中文](README_chinese.md)
 
 ## Problem Category Statistics
-- Sliding Window: 18 problems
+- Sliding Window: 20 problems
 - Array: 6 problems
 - Hash Table: 3 problems
 - Two Pointers: 1 problem
 
 ## Difficulty Statistics
 - Easy: 12 problems
-- Medium: 6 problems
-- Hard: 0 problems
+- Medium: 7 problems
+- Hard: 1 problem
 
 This repository tracks my LeetCode problem-solving progress, primarily using Python.
 
@@ -19,9 +19,11 @@ This repository tracks my LeetCode problem-solving progress, primarily using Pyt
 ### Sliding Window
 
 #### Fixed-size Sliding Window
-| Problem No. | Problem Name | Optimal Time Complexity | One-line Solution Summary |
+| Problem No. | Problem Name | Optimal Time Complexity | One-line Solution |
 |-------------|--------------|-------------------------|---------------------------|
+| 187 | [Repeated DNA Sequences](./SlidingWindow/Python/187.%20Repeated%20DNA%20Sequences.py) | O(n) | Use sliding window with hash map to count 10-letter sequences, return those occurring more than once |
 | 219 | [Contains Duplicate II](./SlidingWindow/Python/219.contains-duplicate-ii.py) | O(n) | Maintain a hash set of size k, update and check for duplicates as window slides |
+| 239 | [Sliding Window Maximum](./SlidingWindow/Python/239.%20Sliding%20Window%20Maximum.py) | O(n) | Use deque to maintain monotonic decreasing queue, slide window and update max values |
 | 346 | [Moving Average from Data Stream](./SlidingWindow/Python/346.%20Moving%20Average%20from%20Data%20Stream.py) | O(1) | Use a circular buffer (deque) to maintain a fixed-size window, update sum and average |
 | 438 | [Find All Anagrams in a String](./SlidingWindow/Python/438.%20Find%20All%20Anagrams%20in%20a%20String.py) | O(n) | Use fixed-size array to count chars, slide window and compare counts |
 | 567 | [Permutation in String](./SlidingWindow/Python/567.%20Permutation%20in%20String.py) | O(n) | Use fixed-size arrays for char counts, slide window and compare counts |
