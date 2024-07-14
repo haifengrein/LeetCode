@@ -2,14 +2,14 @@
 [English](README.md) | [中文](README_chinese.md)
 
 ## Problem Category Statistics
-- Sliding Window: 20 problems
+- Sliding Window: 26 problems
 - Array: 6 problems
 - Hash Table: 3 problems
 - Two Pointers: 1 problem
 
 ## Difficulty Statistics
 - Easy: 12 problems
-- Medium: 7 problems
+- Medium: 13 problems
 - Hard: 1 problem
 
 This repository tracks my LeetCode problem-solving progress, primarily using Python.
@@ -19,7 +19,7 @@ This repository tracks my LeetCode problem-solving progress, primarily using Pyt
 ### Sliding Window
 
 #### Fixed-size Sliding Window
-| Problem No. | Problem Name | Optimal Time Complexity | One-line Solution |
+| Problem No. | Problem Name | Optimal Time Complexity | One-line Solution Summary |
 |-------------|--------------|-------------------------|---------------------------|
 | 187 | [Repeated DNA Sequences](./SlidingWindow/Python/187.%20Repeated%20DNA%20Sequences.py) | O(n) | Use sliding window with hash map to count 10-letter sequences, return those occurring more than once |
 | 219 | [Contains Duplicate II](./SlidingWindow/Python/219.contains-duplicate-ii.py) | O(n) | Maintain a hash set of size k, update and check for duplicates as window slides |
@@ -42,6 +42,14 @@ This repository tracks my LeetCode problem-solving progress, primarily using Pyt
 #### Variable-size Sliding Window
 | Problem No. | Problem Name | Optimal Time Complexity | One-line Solution Summary |
 |-------------|--------------|-------------------------|---------------------------|
+| 3 | [Longest Substring Without Repeating Characters](./SlidingWindow/Python/3.Longest%20Substring%20Without%20Repeating%20Characters.py) | O(n) | Use hash map to track char positions, expand window and update max length when no repeats |
+| 159 | [Longest Substring with At Most Two Distinct Characters](./SlidingWindow/Python/159.%20Longest%20Substring%20with%20At%20Most%20Two%20Distinct%20Characters.py) | O(n) | Use hash map to count chars, expand window while distinct chars <= 2, update max length |
+| 340 | [Longest Substring with At Most K Distinct Characters](./SlidingWindow/Python/340.%20Longest%20Substring%20with%20At%20Most%20K%20Distinct%20Characters.py) | O(n) | Use hash map to count chars, expand window while distinct chars <= k, update max length |
 | 594 | [Longest Harmonious Subsequence](./SlidingWindow/Python/594.%20Longest%20Harmonious%20Subsequence.py) | O(nlogn) | Sort array, use two pointers to maintain window where max-min=1, update max length |
-| 2760 | [Longest Even Odd Subarray With Threshold](./SlidingWindow/Python/2760.%20Longest%20Even%20Odd%20Subarray%20With%20Threshold.py) | O(n) | Two pointers: expand while alternating even-odd and <= threshold, update max length |  
+| 904 | [Fruit Into Baskets](./SlidingWindow/Python/904.%20Fruit%20Into%20Baskets.py) | O(n) | Use hash map to track last positions of two types of fruits, update max length |
+| 1004 | [Max Consecutive Ones III](./SlidingWindow/Python/1004.%20Max%20Consecutive%20Ones%20III.py) | O(n) | Count zeros, expand window while zeros <= k, update max length of consecutive ones |
+| 1438 | [Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit](./SlidingWindow/Python/1438.%20Longest%20Continuous%20Subarray%20With%20Absolute%20Diff%20Less%20Than%20or%20Equal%20to%20Limit.py) | O(n) | Use two deques to track min and max, expand window while max-min <= limit, update max length |
+| 1838 | [Frequency of the Most Frequent Element](./SlidingWindow/Python/1838.%20Frequency%20of%20the%20Most%20Frequent%20Element.py) | O(nlogn) | Sort array, use sliding window to find max frequency while sum of increments <= k |
+| 2760 | [Longest Even Odd Subarray With Threshold](./SlidingWindow/Python/2760.%20Longest%20Even%20Odd%20Subarray%20With%20Threshold.py) | O(n) | Two pointers: expand while alternating even-odd and <= threshold, update max length |
+| 2958 | [Length of Longest Subarray With at Most K Frequency](./SlidingWindow/Python/2958.%20Length%20of%20Longest%20Subarray%20With%20at%20Most%20K%20Frequency.py) | O(n) | Use hash map to count frequencies, expand window while all frequencies <= k, update max length |
 | 3090 | [Maximum Length Substring With Two Occurrences](./SlidingWindow/Python/3090.%20Maximum%20Length%20Substring%20With%20Two%20Occurrences.py) | O(n) | Expand right, contract left when char count > 2, update max length, use hash map to count |

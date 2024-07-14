@@ -2,14 +2,14 @@
 [English](README.md) | [中文](README_chinese.md)
 
 ## 问题类别统计
-- 滑动窗口：20 题
+- 滑动窗口：26 题
 - 数组：6 题
 - 哈希表：3 题
 - 双指针：1 题
 
 ## 难度统计
 - 简单：12 题
-- 中等：7 题
+- 中等：13 题
 - 困难：1 题
 
 本仓库跟踪我的 LeetCode 解题进度，主要使用 Python。
@@ -42,6 +42,14 @@
 #### 可变大小滑动窗口
 | 题号 | 题目名称 | 最优时间复杂度 | 一行解题摘要 |
 |------|----------|----------------|--------------|
+| 3 | [无重复字符的最长子串](./SlidingWindow/Python/3.%20Longest%20Substring%20Without%20Repeating%20Characters.py) | O(n) | 使用哈希表跟踪字符位置，扩展窗口并在无重复时更新最大长度 |
+| 159 | [至多包含两个不同字符的最长子串](./SlidingWindow/Python/159.%20Longest%20Substring%20with%20At%20Most%20Two%20Distinct%20Characters.py) | O(n) | 使用哈希表计数字符，扩展窗口直到不同字符数<=2，更新最大长度 |
+| 340 | [至多包含 K 个不同字符的最长子串](./SlidingWindow/Python/340.%20Longest%20Substring%20with%20At%20Most%20K%20Distinct%20Characters.py) | O(n) | 使用哈希表计数字符，扩展窗口直到不同字符数<=k，更新最大长度 |
 | 594 | [最长和谐子序列](./SlidingWindow/Python/594.%20Longest%20Harmonious%20Subsequence.py) | O(nlogn) | 排序数组，使用双指针维护最大值减最小值等于1的窗口，更新最大长度 |
-| 2760 | [最长奇偶子数组](./SlidingWindow/Python/2760.%20Longest%20Even%20Odd%20Subarray%20With%20Threshold.py) | O(n) | 双指针：在奇偶交替且小于等于阈值的条件下扩展，更新最大长度 |  
+| 904 | [水果成篮](./SlidingWindow/Python/904.%20Fruit%20Into%20Baskets.py) | O(n) | 使用哈希表跟踪两种水果的最后位置，更新最大长度 |
+| 1004 | [最大连续1的个数 III](./SlidingWindow/Python/1004.%20Max%20Consecutive%20Ones%20III.py) | O(n) | 计数零，扩展窗口直到零的数量<=k，更新最大连续1的长度 |
+| 1438 | [绝对差不超过限制的最长连续子数组](./SlidingWindow/Python/1438.%20Longest%20Continuous%20Subarray%20With%20Absolute%20Diff%20Less%20Than%20or%20Equal%20to%20Limit.py) | O(n) | 使用两个双端队列跟踪最小值和最大值，扩展窗口直到最大值-最小值<=限制，更新最大长度 |
+| 1838 | [最高频元素的频数](./SlidingWindow/Python/1838.%20Frequency%20of%20the%20Most%20Frequent%20Element.py) | O(nlogn) | 排序数组，使用滑动窗口找出最大频率，同时保证增量和<=k |
+| 2760 | [最长奇偶子数组](./SlidingWindow/Python/2760.%20Longest%20Even%20Odd%20Subarray%20With%20Threshold.py) | O(n) | 双指针：在奇偶交替且小于等于阈值的条件下扩展，更新最大长度 |
+| 2958 | [最多 K 个重复元素的最长子数组](./SlidingWindow/Python/2958.%20Length%20of%20Longest%20Subarray%20With%20at%20Most%20K%20Frequency.py) | O(n) | 使用哈希表计数频率，扩展窗口直到所有频率<=k，更新最大长度 |
 | 3090 | [每个字符最多出现两次的最长子字符串](./SlidingWindow/Python/3090.%20Maximum%20Length%20Substring%20With%20Two%20Occurrences.py) | O(n) | 右指针扩展，当字符计数大于2时左指针收缩，更新最大长度，使用哈希表计数 |
