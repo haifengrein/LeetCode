@@ -65,11 +65,10 @@ class Solution:
             if cnt[s[right]] > max_count:
                 max_count = cnt[s[right]]
 
-            if right - left + 1 - max_count <=k:
-                ans = max(ans,right -left + 1)
             if right - left + 1 - max_count > k:
                 cnt[s[left]] -= 1
                 left +=1
+            ans = max(ans,right -left + 1)
         return ans
 
 # @lc code=end

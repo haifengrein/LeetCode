@@ -1,15 +1,15 @@
 # LeetCode Progress Tracker
-[English](README.md) | [中文](README_chinese.md)
+[English](README.md)
 
 ## Problem Category Statistics
 - Sliding Window: 33 problems
 - Array: 6 problems
 - Hash Table: 3 problems
-- Two Pointers: 1 problem
+- Two Pointers: 13 problem
 
 ## Difficulty Statistics
-- Easy: 12 problems
-- Medium: 17 problems
+- Easy: 18 problems
+- Medium: 21 problems
 - Hard: 4 problems
 
 This repository tracks my LeetCode problem-solving progress, primarily using Python.
@@ -60,3 +60,21 @@ This repository tracks my LeetCode problem-solving progress, primarily using Pyt
 | 2760 | [Longest Even Odd Subarray With Threshold](./SlidingWindow/Python/2760.%20Longest%20Even%20Odd%20Subarray%20With%20Threshold.py) | O(n) | Two pointers: expand while alternating even-odd and <= threshold, update max length |
 | 2958 | [Length of Longest Subarray With at Most K Frequency](./SlidingWindow/Python/2958.%20Length%20of%20Longest%20Subarray%20With%20at%20Most%20K%20Frequency.py) | O(n) | Use hash map to count frequencies, expand window while all frequencies <= k, update max length |
 | 3090 | [Maximum Length Substring With Two Occurrences](./SlidingWindow/Python/3090.%20Maximum%20Length%20Substring%20With%20Two%20Occurrences.py) | O(n) | Expand right, contract left when char count > 2, update max length, use hash map to count |
+
+### Two Pointers
+
+| Problem No. | Problem Name | Optimal Time Complexity | One-line Solution Summary |
+|-------------|--------------|-------------------------|---------------------------|
+| 15 | [3Sum](./TwoPointer/Python/15.%203Sum.py) | O(n^2) | Sort array, fix one number and use two pointers to find the other two |
+| 26 | [Remove Duplicates from Sorted Array](./TwoPointer/Python/26.%20Remove%20Duplicates%20from%20Sorted%20Array.py) | O(n) | Use two pointers, one to iterate through array, one to keep track of last unique element position |
+| 27 | [Remove Element](./TwoPointer/Python/27.%20Remove%20Element.py) | O(n) | Use two pointers, one to iterate through array, one to keep track of elements not equal to val |
+| 28 | [Find the Index of the First Occurrence in a String](./TwoPointer/Python/28.%20Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String.py) | O((n-m+1)*m) | Traverse main string, compare substring, return index when match found |
+| 88 | [Merge Sorted Array](./TwoPointer/Python/88.%20Merge%20Sorted%20Array.py) | O(m+n) | Compare elements from back to front, place larger one at the end of nums1 |
+| 125 | [Valid Palindrome](./TwoPointer/Python/125.%20Valid%20Palindrome.py) | O(n) | Convert string to lowercase alphanumeric, then compare forward and backward |
+| 167 | [Two Sum II - Input Array Is Sorted](./TwoPointer/Python/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted.py) | O(n) | Use left and right pointers, move based on comparison with target sum |
+| 170 | [Two Sum III - Data structure design](./TwoPointer/Python/170.%20Two%20Sum%20III%20-%20Data%20structure%20design.py) | O(n) add, O(n) find | Use hash table to store numbers and their counts, traverse hash table when finding |
+| 252 | [Meeting Rooms](./TwoPointer/Python/252.%20Meeting%20Rooms.py) | O(nlogn) | Sort meeting times, check if adjacent meetings overlap |
+| 253 | [Meeting Rooms II](./TwoPointer/Python/253.%20Meeting%20Rooms%20II.py) | O(nlogn) | Sort start and end times separately, use pointers to traverse and count concurrent meetings |
+| 283 | [Move Zeroes](./TwoPointer/Python/283.%20Move%20Zeroes.py) | O(n) | Use two pointers, one traverses array, one records non-zero position, swap when non-zero found |
+| 408 | [Valid Word Abbreviation](./TwoPointer/Python/408.%20Valid%20Word%20Abbreviation.py) | O(n) | Use two pointers to traverse word and abbr respectively, handle numeric abbreviations |
+| 680 | [Valid Palindrome II](./TwoPointer/Python/680.%20Valid%20Palindrome%20II.py) | O(n) | Compare from both ends, when different chars found, try deleting left or right char and check palindrome |

@@ -61,10 +61,15 @@ class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         def at_most(k):
             left, res = 0, 0
+            cnt = collections.Counter()
             for right, num in enumerate(nums):
-                k -= num % 2
+                if cnt[num] == 0:
+                    k -= num % 2
+                cnt[num] += 1
                 while k < 0:
-                    k += nums[left] % 2
+                    cnt[nums[left]] -= 1
+                    if cnt[nums[left]] ==0:
+                        k += 1
                     left +=1
                 res += right - left + 1
             return res

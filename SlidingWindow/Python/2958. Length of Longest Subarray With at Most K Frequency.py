@@ -82,31 +82,6 @@ class Solution:
         return ans
                  
 # @lc code=end
-class Solution:
-    def maxSubarrayLength(self, nums: List[int], k: int) -> int:
-
-        window = {}
-        ans = 0
-        invalid_count = 0  
-        left = 0
-        for right in range(len(nums)):
-
-            num = nums[right]
-            window[num] = window.get(num, 0) + 1
-            if window[num] == k + 1:
-                invalid_count += 1
-
-            if invalid_count == 0:
-                ans = max(ans, right - left + 1)
-
-            while invalid_count > 0:
-                window[nums[left]] -= 1
-                if window[nums[left]] == k:
-                    invalid_count -= 1
-                left += 1
-
-        return ans
-
 
 #
 # @lcpr case=start
